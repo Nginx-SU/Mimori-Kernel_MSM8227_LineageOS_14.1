@@ -7,20 +7,25 @@ This kernel need kernel configuration app to control this kernel, so try to find
 This kernel feature is :
 - Compatibility with AOSP,CM And LineageOS based ROM [Android 6.0+]
 - Added overclock up to 1,7Ghz
-- Added Double Tap 2 Wake Feature
+- Added Double Tap 2 Wake Feature (Incl. Vibration)
 - Added custom CPU Governor 
 : Alucard,Intelliactive,IntelliMM,Lionheart & Adaptive
 - Added custom I/O Sched Governor 
 : zen,sio,sioplus,tripndroid,fifo,fiops and vr
-- Compiled using GCC 4.9 GCC Toolchains 
-- Updated I/O Sched default list
+- Added custom TCP Modules
+: Advanced,Bic,Westwood,Hybla,Vegas,Veno,Yeah and more
+- Added USB Fastcharge v1
+- Added CPU Voltage Table Control
+- Compiled using GCC 4.9.X Google GCC Toolchains 
 - Sync from latest LineageOS Kernel Source 20170701
 
-Testing build is still available on source
+Testing build is available on source
+[V2 is on Build folder]
 
-#TEST PROJECT
+#PRIVATE PROJECT
 
-Build status : PREPARED
+Build status : First Build Done (20170816)
+	       Second Build Done (20170817)
 
 Thanks to :
 Ron Gokhale (@PecanCM) [For Kernel Source]

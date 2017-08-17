@@ -1,0 +1,20 @@
+Changelog :
+
+Second Build (20170817):
+- Set kernel as permissive
+- Enabling 972Mhz to fix slow response on boot and skipped frequency on system
+- Added Custom TCP Congestion
+- Added CPU Voltage Control
+- Added DT2W Vibration Support
+- Added USB Fastcharge v1
+- Adapted Some CPU Governor with CPU Freq Table
+
+First Build (20170816):
+- INITIAL BUILD
+: - Included Custom CPU Governor
+  - CPU Overclocked to 1.458Mhz
+  - Using NEON Optimized as VFP
+  - DT2W Feature
+  - CPU Optimization Algorithm
+  - Custom I/O Sched
+ 
