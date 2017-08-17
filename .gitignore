@@ -64,6 +64,8 @@ include/config
 include/linux/version.h
 include/generated
 arch/*/include/generated
+arch/arm/boot/compressed/bswapsdi2.S
+arch/arm/crypto/sha256-core.S
 
 # stgit generated dirs
 patches-*
