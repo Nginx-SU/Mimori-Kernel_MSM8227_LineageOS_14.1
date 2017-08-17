@@ -3000,10 +3000,7 @@ static int sitar_volatile(struct snd_soc_codec *ssc, unsigned int reg)
 }
 
 #define SITAR_FORMATS (SNDRV_PCM_FMTBIT_S16_LE)
-#ifndef CONFIG_THUNDERSONIC_ENGINE_GPL
-static
-#endif
-int sitar_write(struct snd_soc_codec *codec, unsigned int reg,
+static int sitar_write(struct snd_soc_codec *codec, unsigned int reg,
 	unsigned int value)
 {
 	int ret;
@@ -3019,15 +3016,7 @@ int sitar_write(struct snd_soc_codec *codec, unsigned int reg,
 
 	return wcd9xxx_reg_write(codec->control_data, reg, value);
 }
-
-#ifdef CONFIG_THUNDERSONIC_ENGINE_GPL
-EXPORT_SYMBOL(sitar_write);
-#endif
- 
-#ifndef CONFIG_THUNDERSONIC_ENGINE_GPL
-static
-#endif
-unsigned int sitar_read(struct snd_soc_codec *codec,
+static unsigned int sitar_read(struct snd_soc_codec *codec,
 				unsigned int reg)
 {
 	unsigned int val;
@@ -3048,10 +3037,6 @@ unsigned int sitar_read(struct snd_soc_codec *codec,
 	val = wcd9xxx_reg_read(codec->control_data, reg);
 	return val;
 }
-
-#ifdef CONFIG_THUNDERSONIC_ENGINE_GPL
-EXPORT_SYMBOL(sitar_read);
-#endif
 
 static void sitar_codec_enable_audio_mode_bandgap(struct snd_soc_codec *codec)
 {
@@ -6107,11 +6092,6 @@ static void sitar_codec_init_reg(struct snd_soc_codec *codec)
 			sitar_codec_reg_init_val[i].val);
 }
 
-#ifdef CONFIG_THUNDERSONIC_ENGINE_GPL
-struct snd_soc_codec *tz_codec_pointer;
-EXPORT_SYMBOL(tz_codec_pointer);
-#endif
-
 static int sitar_codec_probe(struct snd_soc_codec *codec)
 {
 	struct sitar *control;
@@ -6121,11 +6101,6 @@ static int sitar_codec_probe(struct snd_soc_codec *codec)
 	int i;
 	u8 sitar_version;
 	int ch_cnt;
-
-	#ifdef CONFIG_THUNDERSONIC_ENGINE_GPL
-         pr_info("Sitar CTRL driver probe...\n");
-         tz_codec_pointer = codec;
- 	#endif
 
 	codec->control_data = dev_get_drvdata(codec->dev->parent);
 	control = codec->control_data;
