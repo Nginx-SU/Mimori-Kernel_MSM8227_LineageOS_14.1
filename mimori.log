@@ -742,6 +742,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      fs/binfmt_elf.o
   CC      fs/mbcache.o
   CC      fs/dcookies.o
+  CC      fs/dyn_sync_cntrl.o
   LD      fs/built-in.o
   LD      ipc/built-in.o
   CC      security/keys/gc.o
@@ -864,6 +865,8 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      block/vr-iosched.o
   CC      block/zen-iosched.o
   LD      block/built-in.o
+  LD      frandom/built-in.o
+  CC [M]  frandom/frandom.o
   LD      drivers/auxdisplay/built-in.o
   CC      drivers/base/core.o
   CC      drivers/base/bus.o
@@ -2762,7 +2765,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   OBJCOPY arch/arm/boot/zImage
   Kernel: arch/arm/boot/zImage is ready
   Building modules, stage 2.
-  MODPOST 14 modules
+  MODPOST 15 modules
   CC      arch/arm/mach-msm/reset_modem.mod.o
   LD [M]  arch/arm/mach-msm/reset_modem.ko
   CC      crypto/ansi_cprng.mod.o
@@ -2791,3 +2794,5 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   LD [M]  drivers/spi/spidev.ko
   CC      drivers/staging/prima/wlan.mod.o
   LD [M]  drivers/staging/prima/wlan.ko
+  CC      frandom/frandom.mod.o
+  LD [M]  frandom/frandom.ko

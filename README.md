@@ -16,16 +16,23 @@ This kernel feature is :
 : Advanced,Bic,Westwood,Hybla,Vegas,Veno,Yeah and more
 - Added USB Fastcharge v1
 - Added CPU Voltage Table Control
+- Implement Power Efficient Workqueues
+- Dynamic management of dirty page writebacks
+- Added Interface of Gentle Fair Sleepers (Option Disable by Default)
+- Added Frandom Support
+- Added Dynamic Fsync 2.0
 - Compiled using GCC 4.9.X Google GCC Toolchains 
 - Sync from latest LineageOS Kernel Source 20170701
 
 Testing build is available on source
 [V2 is on Build folder]
+[V3 still on testing, so not uploaded on source]
 
 #PRIVATE PROJECT
 
 Build status : First Build Done (20170816)
 	       Second Build Done (20170817)
+	       Third Build Done (20170818)
 
 Thanks to :
 Ron Gokhale (@PecanCM) [For Kernel Source]

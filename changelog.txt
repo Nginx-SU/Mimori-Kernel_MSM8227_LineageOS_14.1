@@ -1,5 +1,16 @@
 Changelog :
 
+Third Build (20170818):
+- Little Improvement on CPU Bus Speed
+- Added Dynamic Fsync 2.0
+- Added Frandom Support
+- Added Interface of Gentle Fair Sleepers (Option Disable by Default)
+- Misc change on I/O Partitions
+- Dynamic management of dirty page writebacks
+- Removed "+" Symbol From Kernel Version String
+- Implement Power Efficient Workqueues Feature (Enable by Default)
+- Revert Alucard CPU Governor to v1.0
+ 
 Second Build (20170817):
 - Set kernel as permissive
 - Enabling 972Mhz to fix slow response on boot and skipped frequency on system
