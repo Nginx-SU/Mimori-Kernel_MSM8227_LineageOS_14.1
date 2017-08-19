@@ -32,7 +32,7 @@ This kernel feature is :
 
 Testing build is available on source
 [V2 is on Build folder]
-[V3 still on testing, so not uploaded on source]
+[V3 is on Build folder]
 
 #PRIVATE PROJECT
 
@@ -40,7 +40,7 @@ Build status :
 - First Build     Done           (20170816) [Not Uploaded]
 - Second Build    Done 		 (20170817) [  Uploaded  ]
 - Third Build 	  Done 		 (20170818) [Not Uploaded]
-- Third build RC1 Building 	 (20170819) [Not Uploaded]
+- Third build RC1 Building 	 (20170819) [  Uploaded  ]
 
 Thanks to :
 Ron Gokhale (@PecanCM) [For Kernel Source]
