@@ -4,6 +4,7 @@ Third Build RC1 (20170819):
 - Added Interface of Arch Power Features (Disable by Default)
 - Entropy Tweaks
 - Build vfp with softfp
+- Misc change with cpufreq
  
 Third Build (20170818):
 - Little Improvement on CPU Bus Speed
