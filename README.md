@@ -1,6 +1,7 @@
 # Mimori Kernel || Private Build for Xperia M Kernel
 
-Mimori Kernel is based on Lineage OS source, and included many improvement, features and optimization on processor for Xperia M / M dual devices that use Nougat as base ROM. -----------------------THIS IS PREVIEW BUILD FROM HANA KERNEL----------------------------
+Mimori Kernel is based on Lineage OS source, and included many improvement, features and optimization on processor for Xperia M / M dual devices that use Nougat as base ROM. 
+---------------------------------------------THIS IS PREVIEW BUILD FROM HANA KERNEL------------------------------------------
 
 Mimori kernel offer kernel stability, smoothness process on cpu and This kernel is include several feature to increase performance, This kernel need kernel configuration app to control this kernel, so try to find kernel configuration app after flash this kernel.
 
@@ -38,9 +39,16 @@ Testing build is available on source
 
 Build status :
 - First Build     Done           (20170816) [Not Uploaded]
+<<<<<<< HEAD
 - Second Build    Done 		 (20170817) [  Uploaded  ]
 - Third Build 	  Done 		 (20170818) [Not Uploaded]
 - Third build RC1 Building 	 (20170819) [  Uploaded  ]
+=======
+- Second Build    Done 		       (20170817) [  Uploaded  ]
+- Third Build 	  Done 		       (20170818) [Not Uploaded]
+- Third Build RC1 Done 	 	       (20170819) [  Uploaded  ]
+- Third Build RC2 Done           (20170820) [Not Uploaded]
+>>>>>>> 93a673d... Update README.md
 
 Thanks to :
 Ron Gokhale (@PecanCM) [For Kernel Source]
