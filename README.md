@@ -28,7 +28,9 @@ This kernel feature is :
 - Added Dynamic Fsync 2.0
 - Entropy Tweaks
 - NEON VFP Optimized (softfp)
-- Compiled using GCC 4.9.X Google GCC Toolchains 
+- Added Intelli Plug v3.8
+- Added Intelli Thermal
+- Compiled using GCC 4.9.X Hyper Toolchains 
 - Sync from latest LineageOS Kernel Source 20170701
 
 Testing build is available on source
@@ -39,16 +41,11 @@ Testing build is available on source
 
 Build status :
 - First Build     Done           (20170816) [Not Uploaded]
-<<<<<<< HEAD
 - Second Build    Done 		 (20170817) [  Uploaded  ]
 - Third Build 	  Done 		 (20170818) [Not Uploaded]
-- Third build RC1 Building 	 (20170819) [  Uploaded  ]
-=======
-- Second Build    Done 		       (20170817) [  Uploaded  ]
-- Third Build 	  Done 		       (20170818) [Not Uploaded]
-- Third Build RC1 Done 	 	       (20170819) [  Uploaded  ]
-- Third Build RC2 Done           (20170820) [Not Uploaded]
->>>>>>> 93a673d... Update README.md
+- Third Build RC1 Done 	 	 (20170819) [  Uploaded  ]
+- Third Build RC2 Done           (20170820) [  Uploaded  ]
+- Third Build RC3 Building	 (20170821) [Not Uploaded]
 
 Thanks to :
 Ron Gokhale (@PecanCM) [For Kernel Source]

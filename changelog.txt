@@ -1,5 +1,14 @@
 Changelog :
 
+Third Build RC3 (20170821):
+- Change toolchains to Hyper Toolchains GCC 4.9
+- Decrease thermal limits to 70c
+
+Third Build RC2 (20170820):
+- Added Intelli Plug and Intelli Thermal
+- Fix Neon VFP
+- Upgraded Kernel to 3.4.4
+
 Third Build RC1 (20170819):
 - Added Interface of Arch Power Features (Disable by Default)
 - Entropy Tweaks
