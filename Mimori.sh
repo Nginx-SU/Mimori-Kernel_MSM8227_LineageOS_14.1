@@ -12,14 +12,14 @@ echo "
 ######################################################"
 
 echo "
-###Running GCC Toolchains 4.9 (Google GCC)"
+###Running GCC Toolchains 4.9 (Hyper Toolchains)"
 export ARCH=arm
-export CROSS_COMPILE=/home/Hana/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
+export CROSS_COMPILE=/home/Hana/Hyper-Toolchains/bin/arm-linux-androideabi-
 
 echo "
 ###Building Mimori Kernel"
 make ARCH=arm mimori_nicki_defconfig
-make ARCH=arm CROSS_COMPILE=/home/Hana/arm-linux-androideabi-4.9/bin/arm-linux-androideabi- > mimori.log
+make ARCH=arm CROSS_COMPILE=/home/Hana/Hyper-Toolchains/bin/arm-linux-androideabi- > mimori.log
 
 echo "
 ##Creating Temporary Modules kernel"
@@ -27,7 +27,7 @@ mkdir modules
 cp arch/arm/boot/zImage modules
 find . -name "*.ko" -exec cp {} modules \;
 cd modules
-/home/Hana/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-strip --strip-unneeded *.ko
+/home/Hana/Hyper-Toolchains/bin/arm-linux-androideabi-strip --strip-unneeded *.ko
 cd /home/Hana/Mimori-Kernel
 mv modules TEMP
 
