@@ -1,5 +1,13 @@
 Changelog :
 
+Fourth Build (20170825):
+- Added Optimization on I/O Sched (Improves SSD Speed)
+- Misc fixes for conservative governor
+- Added F2FS and EXFAT File System Support
+- Added Hyper CPU Governor
+- Update Intelli Plug to v3.9
+- Optimized KSM
+
 Third Build RC3 (20170821):
 - Change toolchains to Hyper Toolchains GCC 4.9
 - Decrease thermal limits to 70c
