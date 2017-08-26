@@ -44,7 +44,7 @@ Build status :
 - Third Build RC2   Done           (20170820) [  Uploaded  ]
 - Third Build RC3   Done	   (20170821) [  Uploaded  ]/[XDA Version]
 - Fourth Build      Done	   (20170825) [Not Uploaded]
-- Fourth Build RC1  Building	   (20170826) [Not Uploaded]
+- Fourth Build RC1  Done	   (20170826) [  Uploaded  ]
 
 Thanks to :
 Ron Gokhale (@PecanCM) [For Kernel Source]

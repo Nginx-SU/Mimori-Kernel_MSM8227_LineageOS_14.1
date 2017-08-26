@@ -1,10 +1,52 @@
 scripts/kconfig/conf --silentoldconfig Kconfig
+  WRAP    arch/arm/include/generated/asm/auxvec.h
+  WRAP    arch/arm/include/generated/asm/bitsperlong.h
+  WRAP    arch/arm/include/generated/asm/cputime.h
+  WRAP    arch/arm/include/generated/asm/emergency-restart.h
+  WRAP    arch/arm/include/generated/asm/errno.h
+  WRAP    arch/arm/include/generated/asm/ioctl.h
+  WRAP    arch/arm/include/generated/asm/irq_regs.h
+  WRAP    arch/arm/include/generated/asm/kdebug.h
+  WRAP    arch/arm/include/generated/asm/local.h
+  WRAP    arch/arm/include/generated/asm/local64.h
+  WRAP    arch/arm/include/generated/asm/percpu.h
+  WRAP    arch/arm/include/generated/asm/poll.h
+  WRAP    arch/arm/include/generated/asm/resource.h
+  WRAP    arch/arm/include/generated/asm/sections.h
+  WRAP    arch/arm/include/generated/asm/siginfo.h
+  WRAP    arch/arm/include/generated/asm/simd.h
+  WRAP    arch/arm/include/generated/asm/sizes.h
   CHK     include/linux/version.h
+  UPD     include/linux/version.h
   CHK     include/generated/utsrelease.h
-make[1]: 'include/generated/mach-types.h' is up to date.
+  UPD     include/generated/utsrelease.h
+  Generating include/generated/mach-types.h
+  CC      kernel/bounds.s
+  GEN     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+  GEN     include/generated/asm-offsets.h
   CALL    scripts/checksyscalls.sh
+  HOSTCC  scripts/genksyms/genksyms.o
+  SHIPPED scripts/genksyms/lex.lex.c
+  SHIPPED scripts/genksyms/keywords.hash.c
+  SHIPPED scripts/genksyms/parse.tab.h
+  HOSTCC  scripts/genksyms/lex.lex.o
+  SHIPPED scripts/genksyms/parse.tab.c
+  HOSTCC  scripts/genksyms/parse.tab.o
+  HOSTLD  scripts/genksyms/genksyms
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTLD  scripts/mod/modpost
+  HOSTCC  scripts/selinux/genheaders/genheaders
+  HOSTCC  scripts/selinux/mdp/mdp
+  HOSTCC  scripts/kallsyms
+  HOSTCC  scripts/bin2c
+  CC      init/main.o
   CHK     include/generated/compile.h
-<<<<<<< HEAD
   UPD     include/generated/compile.h
   CC      init/version.o
   CC      init/do_mounts.o
@@ -317,6 +359,7 @@ make[1]: 'include/generated/mach-types.h' is up to date.
   CC      arch/arm/mach-msm/fih_proc_fs.o
   CC      arch/arm/mach-msm/msm_cpu_pwrctl.o
   CC      arch/arm/mach-msm/fastchg.o
+  CC      arch/arm/mach-msm/intelli_plug.o
   LD      arch/arm/mach-msm/built-in.o
   CC [M]  arch/arm/mach-msm/reset_modem.o
   CC      arch/arm/perfmon/perf-function-hooks.o
@@ -433,13 +476,429 @@ make[1]: 'include/generated/mach-types.h' is up to date.
   CC      kernel/kallsyms.o
   CC      kernel/cgroup.o
   CC      kernel/cgroup_freezer.o
-=======
->>>>>>> 7677cff... Fixed smartass2 CPU Governor
   GZIP    kernel/config_data.gz
   CHK     kernel/config_data.h
   UPD     kernel/config_data.h
   CC      kernel/configs.o
+  CC      kernel/res_counter.o
+  CC      kernel/stop_machine.o
+  CC      kernel/audit.o
+  CC      kernel/auditfilter.o
+  CC      kernel/auditsc.o
+  CC      kernel/audit_watch.o
+  CC      kernel/audit_tree.o
+  CC      kernel/kprobes.o
+  CC      kernel/seccomp.o
+  CC      kernel/rcutree.o
+  CC      kernel/utsname_sysctl.o
+  CC      kernel/elfcore.o
+  CC      kernel/irq_work.o
+  CC      kernel/cpu_pm.o
   LD      kernel/built-in.o
+  CC      mm/filemap.o
+  CC      mm/mempool.o
+  CC      mm/oom_kill.o
+  CC      mm/fadvise.o
+  CC      mm/maccess.o
+  CC      mm/page_alloc.o
+  CC      mm/page-writeback.o
+  CC      mm/readahead.o
+  CC      mm/swap.o
+  CC      mm/truncate.o
+  CC      mm/vmscan.o
+  CC      mm/shmem.o
+  CC      mm/prio_tree.o
+  CC      mm/util.o
+  CC      mm/mmzone.o
+  CC      mm/vmstat.o
+  CC      mm/backing-dev.o
+  CC      mm/page_isolation.o
+  CC      mm/mm_init.o
+  CC      mm/mmu_context.o
+  CC      mm/percpu.o
+  CC      mm/compaction.o
+  CC      mm/fremap.o
+  CC      mm/highmem.o
+  CC      mm/madvise.o
+  CC      mm/memory.o
+  CC      mm/mincore.o
+  CC      mm/mlock.o
+  CC      mm/mmap.o
+  CC      mm/mprotect.o
+  CC      mm/mremap.o
+  CC      mm/msync.o
+  CC      mm/rmap.o
+  CC      mm/vmalloc.o
+  CC      mm/pagewalk.o
+  CC      mm/pgtable-generic.o
+  CC      mm/process_vm_access.o
+  CC      mm/showmem.o
+  CC      mm/vmpressure.o
+  CC      mm/init-mm.o
+  CC      mm/bootmem.o
+  CC      mm/memblock.o
+  CC      mm/bounce.o
+  CC      mm/page_io.o
+  CC      mm/swap_state.o
+  CC      mm/swapfile.o
+  CC      mm/dmapool.o
+  CC      mm/sparse.o
+  CC      mm/slub.o
+  CC      mm/migrate.o
+  CC      mm/memcontrol.o
+  CC      mm/page_cgroup.o
+  CC      mm/cleancache.o
+  CC      mm/zsmalloc.o
+  CC      mm/process_reclaim.o
+  LD      mm/built-in.o
+  CC      fs/open.o
+  CC      fs/read_write.o
+  CC      fs/file_table.o
+  CC      fs/super.o
+  CC      fs/char_dev.o
+  CC      fs/stat.o
+  CC      fs/exec.o
+  CC      fs/pipe.o
+  CC      fs/namei.o
+  CC      fs/fcntl.o
+  CC      fs/ioctl.o
+  CC      fs/readdir.o
+  CC      fs/select.o
+  CC      fs/fifo.o
+  CC      fs/dcache.o
+  CC      fs/inode.o
+  CC      fs/attr.o
+  CC      fs/bad_inode.o
+  CC      fs/file.o
+  CC      fs/filesystems.o
+  CC      fs/namespace.o
+  CC      fs/seq_file.o
+  CC      fs/xattr.o
+  CC      fs/libfs.o
+  CC      fs/fs-writeback.o
+  CC      fs/pnode.o
+  CC      fs/drop_caches.o
+  CC      fs/splice.o
+  CC      fs/sync.o
+  CC      fs/utimes.o
+  CC      fs/stack.o
+  CC      fs/fs_struct.o
+  CC      fs/statfs.o
+  CC      fs/buffer.o
+  CC      fs/bio.o
+  CC      fs/block_dev.o
+  CC      fs/direct-io.o
+  CC      fs/mpage.o
+  CC      fs/ioprio.o
+  CC      fs/proc_namespace.o
+  CC      fs/cifs/cifsfs.o
+  CC      fs/cifs/cifssmb.o
+  CC      fs/cifs/cifs_debug.o
+  CC      fs/cifs/connect.o
+  CC      fs/cifs/dir.o
+  CC      fs/cifs/file.o
+  CC      fs/cifs/inode.o
+  CC      fs/cifs/link.o
+  CC      fs/cifs/misc.o
+  CC      fs/cifs/netmisc.o
+  CC      fs/cifs/smbencrypt.o
+  CC      fs/cifs/transport.o
+  CC      fs/cifs/asn1.o
+  CC      fs/cifs/cifs_unicode.o
+  CC      fs/cifs/nterr.o
+  CC      fs/cifs/xattr.o
+  CC      fs/cifs/cifsencrypt.o
+  CC      fs/cifs/readdir.o
+  CC      fs/cifs/ioctl.o
+  CC      fs/cifs/sess.o
+  CC      fs/cifs/export.o
+  LD      fs/cifs/cifs.o
+  LD      fs/cifs/built-in.o
+  CC      fs/debugfs/inode.o
+  CC      fs/debugfs/file.o
+  LD      fs/debugfs/debugfs.o
+  LD      fs/debugfs/built-in.o
+  CC      fs/devpts/inode.o
+  LD      fs/devpts/devpts.o
+  LD      fs/devpts/built-in.o
+  CC      fs/exfat/exfat.o
+  CC      fs/exfat/exfat_api.o
+  CC      fs/exfat/exfat_blkdev.o
+  CC      fs/exfat/exfat_cache.o
+  CC      fs/exfat/exfat_data.o
+  CC      fs/exfat/exfat_global.o
+  CC      fs/exfat/exfat_nls.o
+  CC      fs/exfat/exfat_oal.o
+  CC      fs/exfat/exfat_upcase.o
+  CC      fs/exfat/exfat_super.o
+  LD      fs/exfat/exfat_core.o
+  LD      fs/exfat/exfat_fs.o
+  LD      fs/exfat/built-in.o
+  LD      fs/exofs/built-in.o
+  CC      fs/ext4/balloc.o
+  CC      fs/ext4/bitmap.o
+  CC      fs/ext4/dir.o
+  CC      fs/ext4/file.o
+  CC      fs/ext4/fsync.o
+  CC      fs/ext4/ialloc.o
+  CC      fs/ext4/inode.o
+  CC      fs/ext4/page-io.o
+  CC      fs/ext4/ioctl.o
+  CC      fs/ext4/namei.o
+  CC      fs/ext4/super.o
+  CC      fs/ext4/symlink.o
+  CC      fs/ext4/hash.o
+  CC      fs/ext4/resize.o
+  CC      fs/ext4/extents.o
+  CC      fs/ext4/ext4_jbd2.o
+  CC      fs/ext4/migrate.o
+  CC      fs/ext4/mballoc.o
+  CC      fs/ext4/block_validity.o
+  CC      fs/ext4/move_extent.o
+  CC      fs/ext4/mmp.o
+  CC      fs/ext4/indirect.o
+  CC      fs/ext4/xattr.o
+  CC      fs/ext4/xattr_user.o
+  CC      fs/ext4/xattr_trusted.o
+  CC      fs/ext4/xattr_security.o
+  LD      fs/ext4/ext4.o
+  LD      fs/ext4/built-in.o
+  CC      fs/f2fs/dir.o
+  CC      fs/f2fs/file.o
+  CC      fs/f2fs/inode.o
+  CC      fs/f2fs/namei.o
+  CC      fs/f2fs/hash.o
+  CC      fs/f2fs/super.o
+  CC      fs/f2fs/inline.o
+  CC      fs/f2fs/checkpoint.o
+  CC      fs/f2fs/gc.o
+  CC      fs/f2fs/data.o
+  CC      fs/f2fs/node.o
+  CC      fs/f2fs/segment.o
+  CC      fs/f2fs/recovery.o
+  CC      fs/f2fs/debug.o
+  CC      fs/f2fs/xattr.o
+  CC      fs/f2fs/acl.o
+  LD      fs/f2fs/f2fs.o
+  LD      fs/f2fs/built-in.o
+  CC      fs/fat/cache.o
+  CC      fs/fat/dir.o
+  CC      fs/fat/fatent.o
+  CC      fs/fat/file.o
+  CC      fs/fat/inode.o
+  CC      fs/fat/misc.o
+  CC      fs/fat/namei_vfat.o
+  LD      fs/fat/fat.o
+  LD      fs/fat/vfat.o
+  LD      fs/fat/built-in.o
+  CC      fs/fuse/dev.o
+  CC      fs/fuse/dir.o
+  CC      fs/fuse/file.o
+  CC      fs/fuse/inode.o
+  CC      fs/fuse/control.o
+  LD      fs/fuse/fuse.o
+  LD      fs/fuse/built-in.o
+  CC      fs/jbd2/transaction.o
+  CC      fs/jbd2/commit.o
+  CC      fs/jbd2/recovery.o
+  CC      fs/jbd2/checkpoint.o
+  CC      fs/jbd2/revoke.o
+  CC      fs/jbd2/journal.o
+  LD      fs/jbd2/jbd2.o
+  LD      fs/jbd2/built-in.o
+  CC      fs/nls/nls_base.o
+  CC      fs/nls/nls_cp437.o
+  CC      fs/nls/nls_ascii.o
+  CC      fs/nls/nls_iso8859-1.o
+  CC      fs/nls/nls_utf8.o
+  LD      fs/nls/built-in.o
+  CC      fs/notify/fsnotify.o
+  CC      fs/notify/notification.o
+  CC      fs/notify/group.o
+  CC      fs/notify/inode_mark.o
+  CC      fs/notify/mark.o
+  CC      fs/notify/vfsmount_mark.o
+  CC      fs/notify/dnotify/dnotify.o
+  LD      fs/notify/dnotify/built-in.o
+  LD      fs/notify/fanotify/built-in.o
+  CC      fs/notify/inotify/inotify_fsnotify.o
+  CC      fs/notify/inotify/inotify_user.o
+  LD      fs/notify/inotify/built-in.o
+  LD      fs/notify/built-in.o
+  CC      fs/proc/mmu.o
+  CC      fs/proc/task_mmu.o
+  CC      fs/proc/inode.o
+  CC      fs/proc/root.o
+  CC      fs/proc/base.o
+  CC      fs/proc/generic.o
+  CC      fs/proc/array.o
+  CC      fs/proc/proc_tty.o
+  CC      fs/proc/cmdline.o
+  CC      fs/proc/consoles.o
+  CC      fs/proc/cpuinfo.o
+  CC      fs/proc/devices.o
+  CC      fs/proc/interrupts.o
+  CC      fs/proc/loadavg.o
+  CC      fs/proc/meminfo.o
+  CC      fs/proc/stat.o
+  CC      fs/proc/uptime.o
+  CC      fs/proc/version.o
+  CC      fs/proc/softirqs.o
+  CC      fs/proc/namespaces.o
+  CC      fs/proc/proc_sysctl.o
+  CC      fs/proc/proc_net.o
+  CC      fs/proc/kmsg.o
+  CC      fs/proc/page.o
+  LD      fs/proc/proc.o
+  LD      fs/proc/built-in.o
+  LD      fs/quota/built-in.o
+  CC      fs/ramfs/inode.o
+  CC      fs/ramfs/file-mmu.o
+  LD      fs/ramfs/ramfs.o
+  LD      fs/ramfs/built-in.o
+  CC      fs/sysfs/inode.o
+  CC      fs/sysfs/file.o
+  CC      fs/sysfs/dir.o
+  CC      fs/sysfs/symlink.o
+  CC      fs/sysfs/mount.o
+  CC      fs/sysfs/bin.o
+  CC      fs/sysfs/group.o
+  LD      fs/sysfs/built-in.o
+  CC      fs/eventpoll.o
+  CC      fs/anon_inodes.o
+  CC      fs/signalfd.o
+  CC      fs/timerfd.o
+  CC      fs/eventfd.o
+  CC      fs/aio.o
+  CC      fs/locks.o
+  CC      fs/binfmt_script.o
+  CC      fs/binfmt_elf.o
+  CC      fs/mbcache.o
+  CC      fs/posix_acl.o
+  CC      fs/xattr_acl.o
+  CC      fs/dcookies.o
+  CC      fs/dyn_sync_cntrl.o
+  LD      fs/built-in.o
+  LD      ipc/built-in.o
+  CC      security/keys/gc.o
+  CC      security/keys/key.o
+  CC      security/keys/keyring.o
+  CC      security/keys/keyctl.o
+  CC      security/keys/permission.o
+  CC      security/keys/process_keys.o
+  CC      security/keys/request_key.o
+  CC      security/keys/request_key_auth.o
+  CC      security/keys/user_defined.o
+  CC      security/keys/proc.o
+  CC      security/keys/sysctl.o
+  LD      security/keys/built-in.o
+  GEN     security/selinux/flask.h security/selinux/av_permissions.h
+  CC      security/selinux/avc.o
+  CC      security/selinux/hooks.o
+  CC      security/selinux/selinuxfs.o
+  CC      security/selinux/netlink.o
+  CC      security/selinux/nlmsgtab.o
+  CC      security/selinux/netif.o
+  CC      security/selinux/netnode.o
+  CC      security/selinux/netport.o
+  CC      security/selinux/exports.o
+  CC      security/selinux/ss/ebitmap.o
+  CC      security/selinux/ss/hashtab.o
+  CC      security/selinux/ss/symtab.o
+  CC      security/selinux/ss/sidtab.o
+  CC      security/selinux/ss/avtab.o
+  CC      security/selinux/ss/policydb.o
+  CC      security/selinux/ss/services.o
+  CC      security/selinux/ss/conditional.o
+  CC      security/selinux/ss/mls.o
+  CC      security/selinux/ss/status.o
+  LD      security/selinux/selinux.o
+  LD      security/selinux/built-in.o
+  CC      security/commoncap.o
+  CC      security/min_addr.o
+  CC      security/security.o
+  CC      security/capability.o
+  CC      security/lsm_audit.o
+  LD      security/built-in.o
+  CC      crypto/api.o
+  CC      crypto/cipher.o
+  CC      crypto/compress.o
+  CC      crypto/algapi.o
+  CC      crypto/scatterwalk.o
+  CC      crypto/proc.o
+  CC      crypto/ablkcipher.o
+  CC      crypto/blkcipher.o
+  CC      crypto/ahash.o
+  CC      crypto/shash.o
+  CC      crypto/algboss.o
+  CC      crypto/testmgr.o
+  LD      crypto/crypto.o
+  CC      crypto/crypto_wq.o
+  LD      crypto/crypto_algapi.o
+  CC      crypto/aead.o
+  LD      crypto/crypto_blkcipher.o
+  CC      crypto/chainiv.o
+  CC      crypto/eseqiv.o
+  LD      crypto/crypto_hash.o
+  CC      crypto/pcompress.o
+  LD      crypto/cryptomgr.o
+  CC      crypto/hmac.o
+  CC      crypto/md4.o
+  CC      crypto/md5.o
+  CC      crypto/sha1_generic.o
+  CC      crypto/sha256_generic.o
+  CC      crypto/ecb.o
+  CC      crypto/cbc.o
+  CC      crypto/cryptd.o
+  CC      crypto/des_generic.o
+  CC      crypto/twofish_generic.o
+  CC      crypto/twofish_common.o
+  CC      crypto/aes_generic.o
+  CC      crypto/arc4.o
+  CC      crypto/deflate.o
+  CC      crypto/crc32c.o
+  CC      crypto/authenc.o
+  CC      crypto/authencesn.o
+  CC      crypto/rng.o
+  CC      crypto/krng.o
+  CC      crypto/ablk_helper.o
+  LD      crypto/built-in.o
+  CC [M]  crypto/ansi_cprng.o
+  CC      block/elevator.o
+  CC      block/blk-core.o
+  CC      block/blk-tag.o
+  CC      block/blk-sysfs.o
+  CC      block/blk-flush.o
+  CC      block/blk-settings.o
+  CC      block/blk-ioc.o
+  CC      block/blk-map.o
+  CC      block/blk-exec.o
+  CC      block/blk-merge.o
+  CC      block/blk-softirq.o
+  CC      block/blk-timeout.o
+  CC      block/blk-iopoll.o
+  CC      block/blk-lib.o
+  CC      block/ioctl.o
+  CC      block/genhd.o
+  CC      block/scsi_ioctl.o
+  CC      block/partition-generic.o
+  CC      block/partitions/check.o
+  CC      block/partitions/msdos.o
+  CC      block/partitions/efi.o
+  LD      block/partitions/built-in.o
+  CC      block/bsg.o
+  CC      block/noop-iosched.o
+  CC      block/deadline-iosched.o
+  CC      block/row-iosched.o
+  CC      block/cfq-iosched.o
+  CC      block/bfq-iosched.o
+  CC      block/sio-iosched.o
+  CC      block/sioplus-iosched.o
+  CC      block/fifo-iosched.o
+  CC      block/tripndroid-iosched.o
+  CC      block/fiops-iosched.o
+  CC      block/vr-iosched.o
+  CC      block/zen-iosched.o
   LD      block/built-in.o
   LD      frandom/built-in.o
   CC [M]  frandom/frandom.o
@@ -544,6 +1003,7 @@ make[1]: 'include/generated/mach-types.h' is up to date.
 k  CC [M]  drivers/staging/prima/CORE/HDD/src/wlan_hdd_wext.o
 =======
   CC      drivers/cpufreq/cpufreq_HYPER.o
+  CC      drivers/cpufreq/cpufreq_smartass2.o
   CC      drivers/cpufreq/freq_table.o
   CC      drivers/cpufreq/cpufreq_gov_msm.o
   LD      drivers/cpufreq/built-in.o
@@ -1269,7 +1729,6 @@ k  CC [M]  drivers/staging/prima/CORE/HDD/src/wlan_hdd_wext.o
   CC [M]  drivers/staging/prima/CORE/HDD/src/wlan_hdd_softap_tx_rx.o
   CC [M]  drivers/staging/prima/CORE/HDD/src/wlan_hdd_tx_rx.o
   CC [M]  drivers/staging/prima/CORE/HDD/src/wlan_hdd_wext.o
->>>>>>> 7677cff... Fixed smartass2 CPU Governor
   CC [M]  drivers/staging/prima/CORE/HDD/src/wlan_hdd_wmm.o
   CC [M]  drivers/staging/prima/CORE/HDD/src/wlan_hdd_wowl.o
   CC [M]  drivers/staging/prima/CORE/HDD/src/wlan_hdd_cfg80211.o
@@ -1418,12 +1877,8 @@ k  CC [M]  drivers/staging/prima/CORE/HDD/src/wlan_hdd_wext.o
   CC      drivers/thermal/thermal_sys.o
   CC      drivers/thermal/msm8960_tsens.o
   CC      drivers/thermal/pm8xxx-tm.o
-<<<<<<< HEAD
-  CC      drivers/thermal/msm_thermal.o
-=======
   CC      drivers/thermal/intelli/msm_thermal.o
   LD      drivers/thermal/intelli/built-in.o
->>>>>>> 7677cff... Fixed smartass2 CPU Governor
   LD      drivers/thermal/built-in.o
   CC      drivers/tty/tty_io.o
   CC      drivers/tty/n_tty.o
@@ -2301,10 +2756,7 @@ k  CC [M]  drivers/staging/prima/CORE/HDD/src/wlan_hdd_wext.o
   CC      lib/kobject.o
   CC      lib/kobject_uevent.o
   CC      lib/md5.o
-<<<<<<< HEAD
-=======
   CC      lib/memcopy.o
->>>>>>> 7677cff... Fixed smartass2 CPU Governor
   CC      lib/memory_alloc.o
   CC      lib/plist.o
   CC      lib/prio_heap.o
