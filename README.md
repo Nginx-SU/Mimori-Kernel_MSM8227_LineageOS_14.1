@@ -13,7 +13,7 @@ This kernel feature is :
 - Added overclock up to 1,7Ghz
 - Added Double Tap 2 Wake Feature (Incl. Vibration)
 - Added custom CPU Governor 
-: Alucard,Intelliactive,IntelliMM,Lionheart & Adaptive
+: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,Hyper & SmartassV2
 - Added custom I/O Sched Governor 
 : zen,sio,sioplus,tripndroid,fifo,fiops and vr
 - Added custom TCP Modules
@@ -27,10 +27,12 @@ This kernel feature is :
 - Added Dynamic Fsync 2.0
 - Entropy Tweaks
 - NEON VFP Optimized (softfp)
-- Added Intelli Plug v3.8
+- Added Intelli Plug v4.0
 - Added Intelli Thermal
+- Added F2FS And EXFAT File System Support (Need Test)
+- Optimized I/O Sched
 - Compiled using GCC 4.9.X Hyper Toolchains 
-- Sync from latest LineageOS Kernel Source 20170701
+- Updated CVE Patch From LineageOS Kernel Source 20170826
 
 #PRIVATE PROJECT
 

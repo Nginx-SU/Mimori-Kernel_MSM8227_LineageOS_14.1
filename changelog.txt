@@ -1,5 +1,13 @@
 Changelog :
 
+Fourth Build RC1 (20170826):
+- Update Intelli Plug to v4.0
+- Optimized SLUB 
+- Set readahed to 256KB 
+- Added CCACHE for faster kernel building
+- Updated CVE Patch (Kernel Security Patch) to 20170826 Based On MSM8960T
+- Misc Optimization 
+
 Fourth Build (20170825):
 - Added Optimization on I/O Sched (Improves SSD Speed)
 - Misc fixes for conservative governor
