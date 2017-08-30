@@ -435,6 +435,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      kernel/power/userwakelock.o
   CC      kernel/power/earlysuspend.o
   CC      kernel/power/fbearlysuspend.o
+  CC      kernel/power/quickwakeup.o
   CC      kernel/power/poweroff.o
   CC      kernel/power/wakeup_reason.o
   LD      kernel/power/built-in.o
