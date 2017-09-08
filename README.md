@@ -10,7 +10,7 @@ Recommended Kernel Configuration App:
 
 This kernel feature is :
 - Compatibility with AOSP,CM And LineageOS based ROM [Android 7.0+]
-- Added overclock up to 1,7Ghz
+- Added overclock up to 1,4Ghz
 - Added Double Tap 2 Wake Feature (Incl. Vibration)
 - Added custom CPU Governor 
 : Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,Hyper & SmartassV2
@@ -48,8 +48,7 @@ Build status :
 - Fourth Build RC2  Done	   (20170830) [  Uploaded  ]
 
 Thanks to :
-Ron Gokhale (@PecanCM) [For Kernel Source]
-Alex Rivero (@Alex_Gamer) [Kernel Tester & Troubleshoot]
-Ngxson (@thichthat) [For DT2W Source]
+Ron Gokhale (@PecanCM)    [For Kernel Source]
+Ngxson (@thichthat)       [For DT2W Source  ]
 
 # プロジェクト　ラブライブ | Project Mimori (2017)
