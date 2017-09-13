@@ -435,7 +435,6 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      kernel/power/userwakelock.o
   CC      kernel/power/earlysuspend.o
   CC      kernel/power/fbearlysuspend.o
-  CC      kernel/power/quickwakeup.o
   CC      kernel/power/poweroff.o
   CC      kernel/power/wakeup_reason.o
   LD      kernel/power/built-in.o
@@ -677,6 +676,8 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      fs/f2fs/node.o
   CC      fs/f2fs/segment.o
   CC      fs/f2fs/recovery.o
+  CC      fs/f2fs/shrinker.o
+  CC      fs/f2fs/extent_cache.o
   CC      fs/f2fs/debug.o
   CC      fs/f2fs/xattr.o
   CC      fs/f2fs/acl.o
@@ -1930,6 +1931,7 @@ k  CC [M]  drivers/staging/prima/CORE/HDD/src/wlan_hdd_wext.o
   CC      drivers/usb/gadget/udc-core.o
   CC      drivers/usb/gadget/ci13xxx_msm.o
   CC      drivers/usb/gadget/android.o
+  CC      drivers/usb/gadget/f_hid.o
   LD      drivers/usb/gadget/g_android.o
   LD      drivers/usb/gadget/built-in.o
   CC      drivers/usb/host/pci-quirks.o

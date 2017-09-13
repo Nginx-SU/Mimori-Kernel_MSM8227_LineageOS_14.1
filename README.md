@@ -29,7 +29,9 @@ This kernel feature is :
 - NEON VFP Optimized (softfp)
 - Added Intelli Plug v4.0
 - Added Intelli Thermal
-- Added F2FS And EXFAT File System Support (Need Test)
+- Added F2FS File System Support (Based on Linux 3.4.y Branch) (Working)
+- Added EXFAT File System Support (Driver Version v1.2.9) (Need Test)
+- Added USB Keyboard Support
 - Optimized I/O Sched
 - Compiled using GCC 4.9.X Hyper Toolchains 
 - Updated CVE Patch From LineageOS Kernel Source 20170826
@@ -46,6 +48,7 @@ Build status :
 - Fourth Build      Done	   (20170825) [Not Uploaded]
 - Fourth Build RC1  Done	   (20170826) [  Uploaded  ]
 - Fourth Build RC2  Done	   (20170830) [  Uploaded  ]
+- Fourth Build RC3  Building	   (20170913) [Not Uploaded]
 
 Thanks to :
 Ron Gokhale (@PecanCM)    [For Kernel Source]

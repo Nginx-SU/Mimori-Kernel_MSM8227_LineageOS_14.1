@@ -1,6 +1,13 @@
 Changelog :
 
-Fourth Build RC1 (20170826):
+Fourth Build RC3 (20170913):
+- BACKPORT F2FS from branch Linux 3.4.y (git.kernel.org)
+- Reverting Quick Wakeup Driver
+- Added USB Keyboard features
+- Updated SDCARDFS Driver
+- Misc fixes
+
+Fourth Build RC1/2 (20170826):
 - Update Intelli Plug to v4.0
 - Optimized SLUB 
 - Set readahed to 256KB 
