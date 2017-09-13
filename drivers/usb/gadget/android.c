@@ -70,6 +70,9 @@
 #include "f_ccid.c"
 #include "f_mtp.c"
 #include "f_accessory.c"
+#include "f_hid.h"
+#include "f_hid_android_keyboard.c"
+#include "f_hid_android_mouse.c"
 #ifdef CONFIG_USB_ANDROID_CDC_ECM
 #include "f_ecm.c"
 #else
@@ -2118,6 +2121,7 @@ static struct android_usb_function *supported_functions[] = {
 	&audio_source_function,
 	&midi_function,
 	&uasp_function,
+	&hid_function,
 	NULL
 };
 
@@ -2391,6 +2395,8 @@ functions_store(struct device *pdev, struct device_attribute *attr,
 						name);
 			}
 		}
+		/* HID driver always enabled, it's the whole point of this kernel patch */
+		android_enable_function(dev, conf, "hid");
 	}
 
 	/* Free uneeded configurations if exists */
