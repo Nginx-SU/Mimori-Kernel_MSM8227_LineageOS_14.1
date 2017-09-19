@@ -1,5 +1,12 @@
 Changelog :
 
+Five Build (20170920):
+- Revert  change of F2FS (back to old source)
+- Revert some optimization change
+- I/O Sched Optimization for SIO and ZEN
+- Misc CPU Optimization
+- Added some sched optimization
+
 Fourth Build RC3 (20170913):
 - BACKPORT F2FS from branch Linux 3.4.y (git.kernel.org)
 - Reverting Quick Wakeup Driver

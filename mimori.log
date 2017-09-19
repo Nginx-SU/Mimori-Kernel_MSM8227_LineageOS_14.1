@@ -358,7 +358,6 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      arch/arm/mach-msm/timer_page.o
   CC      arch/arm/mach-msm/fih_proc_fs.o
   CC      arch/arm/mach-msm/msm_cpu_pwrctl.o
-  CC      arch/arm/mach-msm/fastchg.o
   CC      arch/arm/mach-msm/intelli_plug.o
   LD      arch/arm/mach-msm/built-in.o
   CC [M]  arch/arm/mach-msm/reset_modem.o
@@ -676,8 +675,6 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      fs/f2fs/node.o
   CC      fs/f2fs/segment.o
   CC      fs/f2fs/recovery.o
-  CC      fs/f2fs/shrinker.o
-  CC      fs/f2fs/extent_cache.o
   CC      fs/f2fs/debug.o
   CC      fs/f2fs/xattr.o
   CC      fs/f2fs/acl.o
