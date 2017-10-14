@@ -1146,12 +1146,6 @@ k  CC [M]  drivers/staging/prima/CORE/HDD/src/wlan_hdd_wext.o
   CC      drivers/input/misc/pmic8xxx-pwrkey.o
   CC      drivers/input/misc/uinput.o
   LD      drivers/input/misc/built-in.o
-  CC      drivers/input/mouse/psmouse-base.o
-  CC      drivers/input/mouse/synaptics.o
-  CC      drivers/input/mouse/alps.o
-  CC      drivers/input/mouse/logips2pp.o
-  CC      drivers/input/mouse/trackpoint.o
-  LD      drivers/input/mouse/psmouse.o
   LD      drivers/input/mouse/built-in.o
   CC      drivers/input/sensors/bmm050_driver.o
   CC      drivers/input/sensors/bmm050.o
@@ -2797,11 +2791,8 @@ k  CC [M]  drivers/staging/prima/CORE/HDD/src/wlan_hdd_wext.o
   CC      arch/arm/boot/compressed/misc.o
   CC      arch/arm/boot/compressed/decompress.o
   CC      arch/arm/boot/compressed/string.o
-  SHIPPED arch/arm/boot/compressed/lib1funcs.S
   AS      arch/arm/boot/compressed/lib1funcs.o
-  SHIPPED arch/arm/boot/compressed/ashldi3.S
   AS      arch/arm/boot/compressed/ashldi3.o
-  SHIPPED arch/arm/boot/compressed/bswapsdi2.S
   AS      arch/arm/boot/compressed/bswapsdi2.o
   LD      arch/arm/boot/compressed/vmlinux
   OBJCOPY arch/arm/boot/zImage

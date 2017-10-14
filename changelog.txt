@@ -7,14 +7,12 @@ Five Build (20170920):
 - Misc CPU Optimization
 - Added some sched optimization
 
-Fourth Build RC3 (20170913):
-- BACKPORT F2FS from branch Linux 3.4.y (git.kernel.org)
-- Reverting Quick Wakeup Driver
-- Added USB Keyboard features
-- Updated SDCARDFS Driver
-- Misc fixes
-
-Fourth Build RC1/2 (20170826):
+Fourth Build (20170913):
+- Added Optimization on I/O Sched (Improves SSD Speed)
+- Misc fixes for conservative governor
+- Added F2FS and EXFAT File System Support
+- Added Hyper CPU Governor
+- Optimized KSM
 - Update Intelli Plug to v4.0
 - Optimized SLUB 
 - Set readahed to 256KB 
@@ -22,14 +20,6 @@ Fourth Build RC1/2 (20170826):
 - Updated CVE Patch (Kernel Security Patch) to 20170826 Based On MSM8960T
 - Misc Optimization
 - Added Quick Wakeup driver 
-
-Fourth Build (20170825):
-- Added Optimization on I/O Sched (Improves SSD Speed)
-- Misc fixes for conservative governor
-- Added F2FS and EXFAT File System Support
-- Added Hyper CPU Governor
-- Update Intelli Plug to v3.9
-- Optimized KSM
 
 Third Build RC3 (20170821):
 - Change toolchains to Hyper Toolchains GCC 4.9
