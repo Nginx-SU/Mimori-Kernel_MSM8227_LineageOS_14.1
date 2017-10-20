@@ -15,14 +15,14 @@
 #
 
 #Logic Memory
-CROSS_COMPILE_4="/home/Hana/Hyper-Toolchains/bin"
-CROSS_COMPILE_5="/media/Hana/50644BA7644B8EA2/GCC/arm-linux-androideabi-5.x/bin"
-kernel_temp_modules="/home/Hana/Mimori-Kernel/arch/arm/boot/zImage"
-kernel_source="/home/Hana/Mimori-Kernel"
-kernel_zip="/home/Hana/Mimori-Kernel/TEMP/Pre-built_ZIP/ZIP"
-zImage="/home/Hana/Mimori-Kernel/TEMP/modules/zImage"
-temp="/home/Hana/Mimori-Kernel/TEMP"
-modules="/home/Hana/Mimori-Kernel/modules"
+CROSS_COMPILE_4="/home/mimori/Hyper-Toolchains/bin"
+CROSS_COMPILE_5="/media/mimori/50644BA7644B8EA2/GCC/arm-linux-androideabi-5.x/bin"
+kernel_temp_modules="/home/mimori/Mimori-Kernel/arch/arm/boot/zImage"
+kernel_source="/home/mimori/Mimori-Kernel"
+kernel_zip="/home/mimori/Mimori-Kernel/TEMP/Pre-built_ZIP/ZIP"
+zImage="/home/mimori/Mimori-Kernel/TEMP/modules/zImage"
+temp="/home/mimori/Mimori-Kernel/TEMP"
+modules="/home/mimori/Mimori-Kernel/modules"
 
 #Logic Answer Memory
 answer(){
@@ -37,7 +37,7 @@ build(){
 cp TEMP/Pre-built_ZIP/Template/Mimori_Kernel.zip TEMP/Pre-built_ZIP/ZIP/Mimori_Kernel.zip
 cd $kernel_zip
 unzip Mimori_Kernel.zip
-cd /home/Hana/Mimori-Kernel
+cd /home/mimori/Mimori-Kernel
 mv TEMP/modules/zImage TEMP/Pre-built_ZIP/ZIP/tmp/kernel/boot.img-zImage
 mv TEMP/modules TEMP/Pre-built_ZIP/ZIP/tmp
 cd TEMP/Pre-built_ZIP/ZIP
@@ -46,10 +46,10 @@ zip -r Mimori_Kernel *
 rm -rfv META-INF
 rm -rfv system 
 rm -rfv tmp
-mv Mimori_Kernel.zip /home/Hana/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign/Mimori_Kernel.zip
-cd /home/Hana/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign
+mv Mimori_Kernel.zip /home/mimori/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign/Mimori_Kernel.zip
+cd /home/mimori/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign
 java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Mimori_Kernel.zip Mimori_Kernel-nicki-signed.zip
-mv  Mimori_Kernel-nicki-signed.zip /home/Hana/Mimori-Kernel/Build/Mimori_Kernel-nicki-signed.zip
+mv  Mimori_Kernel-nicki-signed.zip /home/mimori/Mimori-Kernel/Build/Mimori_Kernel-nicki-signed.zip
 rm Mimori_Kernel.zip
 echo "Mimori Kernel Completed to build"
 echo "Thanks to XDA - Developers"
@@ -140,7 +140,7 @@ echo "
 #                                                    #
 #                Nicklas Van Dam @XDA                #
 #                                                    #
-#	   PRIVATE DEVELOPMENT OF Hana Kernel	     #
+#	   PRIVATE DEVELOPMENT OF mimori Kernel	     #
 #						     #
 ######################################################"
 echo "Welcome To Mimori Kernel Builder"
