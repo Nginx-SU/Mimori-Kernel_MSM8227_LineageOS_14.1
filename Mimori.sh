@@ -157,7 +157,7 @@ if [ "$choice" == "$A" ];
 		export CROSS_COMPILE=$CROSS_COMPILE_4/arm-linux-androideabi-
 		echo "##Building Mimori Kernel"
 		make ARCH=arm mimori_nicki_defconfig
-		make ARCH=arm CROSS_COMPILE=$CROSS_COMPILE_4/arm-linux-androideabi- -> mimori.log
+		make ARCH=arm CROSS_COMPILE=$CROSS_COMPILE_4/arm-linux-androideabi- -j4 -> mimori.log
 		modules_gcc_4
 		checking
 fi
@@ -168,7 +168,7 @@ if [ "$choice" == "$B" ];
 		export CROSS_COMPILE=$CROSS_COMPILE_5/arm-linux-androideabi-
 		echo "##Building Mimori Kernel"
 		make ARCH=arm mimori_nicki_defconfig
-		make ARCH=arm CROSS_COMPILE=$CROSS_COMPILE_5/arm-linux-androideabi- -> mimori.log
+		make ARCH=arm CROSS_COMPILE=$CROSS_COMPILE_5/arm-linux-androideabi- -j4 -> mimori.log
 		modules_gcc_5
 		checking
 	else
