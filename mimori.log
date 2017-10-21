@@ -822,6 +822,7 @@ scripts/kconfig/conf --silentoldconfig Kconfig
   CC      crypto/api.o
   CC      crypto/cipher.o
   CC      crypto/compress.o
+  CC      crypto/memneq.o
   CC      crypto/algapi.o
   CC      crypto/scatterwalk.o
   CC      crypto/proc.o

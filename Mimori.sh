@@ -17,12 +17,10 @@
 #Logic Memory
 CROSS_COMPILE_4="/home/mimori/Hyper-Toolchains/bin"
 CROSS_COMPILE_5="/media/mimori/50644BA7644B8EA2/GCC/arm-linux-androideabi-5.x/bin"
-kernel_temp_modules="/home/mimori/Mimori-Kernel/arch/arm/boot/zImage"
+kernel_zImage="arch/arm/boot/zImage"
 kernel_source="/home/mimori/Mimori-Kernel"
-kernel_zip="/home/mimori/Mimori-Kernel/TEMP/Pre-built_ZIP/ZIP"
-zImage="/home/mimori/Mimori-Kernel/TEMP/modules/zImage"
-temp="/home/mimori/Mimori-Kernel/TEMP"
-modules="/home/mimori/Mimori-Kernel/modules"
+kernel_zip="TEMP/Pre-built_ZIP/ZIP"
+zImage="TEMP/modules/zImage"
 
 #Logic Answer Memory
 answer(){
@@ -65,6 +63,7 @@ then
 	echo "Kernel found"
 	echo "Continue to build kernel"
 	build
+	cd $kernel_source
 	message=${1:-"Aozora Jumping Heart"}
 	notify-send -t 10000 -i TEMP/Additional/1.jpg "Aqours" "$message"
 	paplay TEMP/Additional/1.flac
@@ -76,6 +75,7 @@ else
 	echo "Kernel not found"
 	echo "Cancel kernel to build"
 	gedit mimori.log
+	cd $kernel_source
 	message=${1:-"Fuyu Ga Kureta Yokan"}
 	notify-send -t 10000 -i TEMP/Additional/2.jpg "BiBi" "$message"
 	paplay TEMP/Additional/2.flac
@@ -91,24 +91,24 @@ fi
 modules_gcc_4(){
 echo "##Creating Temporary Modules kernel"
 mkdir modules
-cp $kernel_temp_modules $modules
-find . -name "*.ko" -exec cp {} $modules \;
+cp $kernel_zImage modules
+find . -name "*.ko" -exec cp {} modules \;
 cd modules
-$CROSS_COMPILE/arm-linux-androideabi-strip --strip-unneeded *.ko
+$CROSS_COMPILE_4/arm-linux-androideabi-strip --strip-unneeded *.ko
 cd $kernel_source
-mv $modules $temp
+mv modules TEMP
 }
 
 #Kernel Modules GCC5
 modules_gcc_5(){
 echo "##Creating Temporary Modules kernel"
 mkdir modules
-cp $kernel_temp_modules $modules
-find . -name "*.ko" -exec cp {} $modules \;
+cp $kernel_zImage modules
+find . -name "*.ko" -exec cp {} modules \;
 cd modules
 $CROSS_COMPILE_5/arm-linux-androideabi-strip --strip-unneeded *.ko
 cd $kernel_source
-mv $modules $temp
+mv modules TEMP
 }
 
 #Invalid Option
