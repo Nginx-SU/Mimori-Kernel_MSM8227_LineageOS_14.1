@@ -40,16 +40,10 @@ This kernel feature is :
 
 Build status :
 - First Build       Done           (20170816) [Not Uploaded]
-- Second Build      Done 	   (20170817) [  Uploaded  ]
-- Third Build 	    Done 	   (20170818) [Not Uploaded]
-- Third Build RC1   Done 	   (20170819) [  Uploaded  ]
-- Third Build RC2   Done           (20170820) [  Uploaded  ]
-- Third Build RC3   Done	   (20170821) [  Uploaded  ]/[XDA Version]
-- Fourth Build      Done	   (20170825) [Not Uploaded]
-- Fourth Build RC1  Done	   (20170826) [  Uploaded  ]
-- Fourth Build RC2  Done	   (20170830) [  Uploaded  ]
-- Fourth Build RC3  Done	   (20170913) [  Uploaded  ]
-- Five Build	    Done	   (20170920) [  Uploaded  ]
+- Second Build      Done           (20170817) [  Uploaded  ]
+- Third Build       Done           (20170821) [Uploaded]/[XDA Version]
+- Fourth Build      Done	   (20170913) [Uploaded]
+- Five Build	    Done	   (20171002) [Uploaded]/[Preparing XDA Version]
 
 Thanks to :
 Ron Gokhale (@PecanCM)    [For Kernel Source]
