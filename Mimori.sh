@@ -15,10 +15,10 @@
 #
 
 #Logic Memory
-CROSS_COMPILE_4="/home/mimori/Hyper-Toolchains/bin"
-CROSS_COMPILE_5="/media/mimori/50644BA7644B8EA2/GCC/arm-linux-androideabi-5.x/bin"
+CROSS_COMPILE_4="/home/Dicky/GCC/Hyper-Toolchains.4.9/bin"
+CROSS_COMPILE_5="/home/Dicky/GCC/arm-linux-androideabi-5.x/bin"
 kernel_zImage="arch/arm/boot/zImage"
-kernel_source="/home/mimori/Mimori-Kernel"
+kernel_source="/home/Dicky/Mimori-Kernel"
 kernel_zip="TEMP/Pre-built_ZIP/ZIP"
 zImage="TEMP/modules/zImage"
 
@@ -35,19 +35,19 @@ build(){
 cp TEMP/Pre-built_ZIP/Template/Mimori_Kernel.zip TEMP/Pre-built_ZIP/ZIP/Mimori_Kernel.zip
 cd $kernel_zip
 unzip Mimori_Kernel.zip
-cd /home/mimori/Mimori-Kernel
+cd /home/Dicky/Mimori-Kernel
 mv TEMP/modules/zImage TEMP/Pre-built_ZIP/ZIP/tmp/kernel/boot.img-zImage
 mv TEMP/modules TEMP/Pre-built_ZIP/ZIP/tmp
 cd TEMP/Pre-built_ZIP/ZIP
 rm Mimori_Kernel.zip
 zip -r Mimori_Kernel *
 rm -rfv META-INF
-rm -rfv system 
+rm -rfv system
 rm -rfv tmp
-mv Mimori_Kernel.zip /home/mimori/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign/Mimori_Kernel.zip
-cd /home/mimori/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign
+mv Mimori_Kernel.zip /home/Dicky/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign/Mimori_Kernel.zip
+cd /home/Dicky/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign
 java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Mimori_Kernel.zip Mimori_Kernel-nicki-signed.zip
-mv  Mimori_Kernel-nicki-signed.zip /home/mimori/Mimori-Kernel/Build/Mimori_Kernel-nicki-signed.zip
+mv  Mimori_Kernel-nicki-signed.zip /home/dicky/Mimori-Kernel/Build/Mimori_Kernel-nicki-signed.zip
 rm Mimori_Kernel.zip
 echo "Mimori Kernel Completed to build"
 echo "Thanks to XDA - Developers"
@@ -74,7 +74,7 @@ then
 else
 	echo "Kernel not found"
 	echo "Cancel kernel to build"
-	gedit mimori.log
+	echo "Please Check Log"
 	cd $kernel_source
 	message=${1:-"Fuyu Ga Kureta Yokan"}
 	notify-send -t 10000 -i TEMP/Additional/2.jpg "BiBi" "$message"
