@@ -15,10 +15,10 @@
 #
 
 #Logic Memory
-CROSS_COMPILE_4="/home/Dicky/GCC/Hyper-Toolchains.4.9/bin"
-CROSS_COMPILE_5="/home/Dicky/GCC/arm-linux-androideabi-5.x/bin"
+# CROSS_COMPILE_4="/home/Dicky/GCC/Hyper-Toolchains.4.9/bin"
+CROSS_COMPILE_5="/mnt/c/Linux/arm-linux-androideabi-5.x/bin"
 kernel_zImage="arch/arm/boot/zImage"
-kernel_source="/home/Dicky/Mimori-Kernel"
+kernel_source="/home/Dicky/kernel"
 kernel_zip="TEMP/Pre-built_ZIP/ZIP"
 zImage="TEMP/modules/zImage"
 
@@ -35,7 +35,7 @@ build(){
 cp TEMP/Pre-built_ZIP/Template/Mimori_Kernel.zip TEMP/Pre-built_ZIP/ZIP/Mimori_Kernel.zip
 cd $kernel_zip
 unzip Mimori_Kernel.zip
-cd /home/Dicky/Mimori-Kernel
+cd $kernel_source
 mv TEMP/modules/zImage TEMP/Pre-built_ZIP/ZIP/tmp/kernel/boot.img-zImage
 mv TEMP/modules TEMP/Pre-built_ZIP/ZIP/tmp
 cd TEMP/Pre-built_ZIP/ZIP
@@ -44,10 +44,10 @@ zip -r Mimori_Kernel *
 rm -rfv META-INF
 rm -rfv system
 rm -rfv tmp
-mv Mimori_Kernel.zip /home/Dicky/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign/Mimori_Kernel.zip
-cd /home/Dicky/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign
+mv Mimori_Kernel.zip /home/Dicky/kernel/TEMP/Pre-built_ZIP/Sign/Mimori_Kernel.zip
+cd /home/Dicky/kernel/TEMP/Pre-built_ZIP/Sign
 java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Mimori_Kernel.zip Mimori_Kernel-nicki-signed.zip
-mv  Mimori_Kernel-nicki-signed.zip /home/dicky/Mimori-Kernel/Build/Mimori_Kernel-nicki-signed.zip
+mv  Mimori_Kernel-nicki-signed.zip /home/Dicky/kernel/Build/Mimori_Kernel-nicki-signed.zip
 rm Mimori_Kernel.zip
 echo "Mimori Kernel Completed to build"
 echo "Thanks to XDA - Developers"
@@ -63,10 +63,6 @@ then
 	echo "Kernel found"
 	echo "Continue to build kernel"
 	build
-	cd $kernel_source
-	message=${1:-"Aozora Jumping Heart"}
-	notify-send -t 10000 -i TEMP/Additional/1.jpg "Aqours" "$message"
-	paplay TEMP/Additional/1.flac
 	echo "Cleaning up"
 	cd $kernel_source
 	make clean && make mrproper
@@ -75,10 +71,6 @@ else
 	echo "Kernel not found"
 	echo "Cancel kernel to build"
 	echo "Please Check Log"
-	cd $kernel_source
-	message=${1:-"Fuyu Ga Kureta Yokan"}
-	notify-send -t 10000 -i TEMP/Additional/2.jpg "BiBi" "$message"
-	paplay TEMP/Additional/2.flac
 	echo "Cleaning up"
 	cd $kernel_source
 	make clean && make mrproper
@@ -88,16 +80,16 @@ fi
 }
 
 #Kernel Modules GCC4
-modules_gcc_4(){
-echo "##Creating Temporary Modules kernel"
-mkdir modules
-cp $kernel_zImage modules
-find . -name "*.ko" -exec cp {} modules \;
-cd modules
-$CROSS_COMPILE_4/arm-linux-androideabi-strip --strip-unneeded *.ko
-cd $kernel_source
-mv modules TEMP
-}
+# modules_gcc_4(){
+# echo "##Creating Temporary Modules kernel"
+# mkdir modules
+# cp $kernel_zImage modules
+# find . -name "*.ko" -exec cp {} modules \;
+# cd modules
+# $CROSS_COMPILE_4/arm-linux-androideabi-strip --strip-unneeded *.ko
+# cd $kernel_source
+# mv modules TEMP
+# }
 
 #Kernel Modules GCC5
 modules_gcc_5(){
@@ -145,7 +137,7 @@ echo "
 ######################################################"
 echo "Welcome To Mimori Kernel Builder"
 echo "Select Which GCC To Use ?"
-echo "1. GCC 4.9.X"
+echo "1. GCC 4.9.X (Temporary Disable)"
 echo "2. GCC 5.4.X"
 echo "( 1 / 2)"
 read choice
@@ -153,18 +145,20 @@ answer
 if [ "$choice" == "$A" ];
 	then
 		echo "##Running GCC Toolchains 4.9 (Hyper Toolchains)"
-		export ARCH=arm 
-		export CROSS_COMPILE=$CROSS_COMPILE_4/arm-linux-androideabi-
-		echo "##Building Mimori Kernel"
-		make ARCH=arm mimori_nicki_defconfig
-		make ARCH=arm CROSS_COMPILE=$CROSS_COMPILE_4/arm-linux-androideabi- -j4 -> mimori.log
-		modules_gcc_4
-		checking
+		# export ARCH=arm
+		# export CROSS_COMPILE=$CROSS_COMPILE_4/arm-linux-androideabi-
+		# echo "##Building Mimori Kernel"
+		# make ARCH=arm mimori_nicki_defconfig
+		# make ARCH=arm CROSS_COMPILE=$CROSS_COMPILE_4/arm-linux-androideabi- -j4 -> mimori.log
+		# modules_gcc_4
+		# checking
+		echo "Sorry this menu is temporary disable"
+		menu_compile
 fi
 if [ "$choice" == "$B" ];
 	then
 		echo "##Running GCC Toolchains 5.4 (Hyper Toolchains)"
-		export ARCH=arm 
+		export ARCH=arm
 		export CROSS_COMPILE=$CROSS_COMPILE_5/arm-linux-androideabi-
 		echo "##Building Mimori Kernel"
 		make ARCH=arm mimori_nicki_defconfig
