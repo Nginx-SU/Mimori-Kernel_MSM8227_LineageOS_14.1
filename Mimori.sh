@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright 2017, Dicky Herlambang "Nicklas373" <herlambangdicky5@gmail.com>
+# Copyright 2018, Dicky Herlambang "Nicklas373" <herlambangdicky5@gmail.com>
 #
 # Mimori Kernel Builder Script
 #
@@ -15,10 +15,10 @@
 #
 
 #Logic Memory
-# CROSS_COMPILE_4="/home/Dicky/GCC/Hyper-Toolchains.4.9/bin"
-CROSS_COMPILE_5="/mnt/c/Linux/arm-linux-androideabi-5.x/bin"
+# CROSS_COMPILE_4="/home/Matsuura/GCC/Hyper-Toolchains.4.9/bin"
+CROSS_COMPILE_5="/home/Matsuura/arm-linux-androideabi-5.x/bin"
 kernel_zImage="arch/arm/boot/zImage"
-kernel_source="/home/Dicky/kernel"
+kernel_source="/home/Matsuura/Mimori-Kernel"
 kernel_zip="TEMP/Pre-built_ZIP/ZIP"
 zImage="TEMP/modules/zImage"
 
@@ -44,15 +44,15 @@ zip -r Mimori_Kernel *
 rm -rfv META-INF
 rm -rfv system
 rm -rfv tmp
-mv Mimori_Kernel.zip /home/Dicky/kernel/TEMP/Pre-built_ZIP/Sign/Mimori_Kernel.zip
-cd /home/Dicky/kernel/TEMP/Pre-built_ZIP/Sign
+mv Mimori_Kernel.zip /home/Matsuura/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign/Mimori_Kernel.zip
+cd /home/Matsuura/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign
 java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Mimori_Kernel.zip Mimori_Kernel-nicki-signed.zip
-mv  Mimori_Kernel-nicki-signed.zip /home/Dicky/kernel/Build/Mimori_Kernel-nicki-signed.zip
+mv  Mimori_Kernel-nicki-signed.zip /home/Matsuura/Mimori-Kernel/Build/Mimori_Kernel-nicki-signed.zip
 rm Mimori_Kernel.zip
 echo "Mimori Kernel Completed to build"
 echo "Thanks to XDA - Developers"
-echo "プロジェクト　ラブライブ | Project MIMORI (2017)"
-echo "あろがとう　ございます μ's !!!"
+echo "プロジェクト　ラブライブ | Project MIMORI (2018)"
+echo "ありがとう　ございます μ's !!!"
 }
 
 #Kernel Checking

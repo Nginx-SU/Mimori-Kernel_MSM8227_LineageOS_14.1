@@ -43,10 +43,10 @@ Build status :
 - Second Build      Done           (20170817) [  Uploaded  ]
 - Third Build       Done           (20170821) [Uploaded]/[XDA Version]
 - Fourth Build      Done	   (20170913) [Uploaded]
-- Five Build	    Done	   (20171002) [Uploaded]/[Preparing XDA Version]
+- Five Build	    Done	   (20171002) [Uploaded]/[XDA Version]
 
 Thanks to :
 Ron Gokhale (@PecanCM)    [For Kernel Source]
 Ngxson (@thichthat)       [For DT2W Source  ]
 
-# プロジェクト　ラブライブ | Project Mimori (2017)
+# プロジェクト　ラブライブ | Project Mimori (2018)
