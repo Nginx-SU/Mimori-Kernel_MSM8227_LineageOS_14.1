@@ -33,7 +33,7 @@ This kernel feature is :
 - Added USB Keyboard Support
 - Optimized I/O Sched
 - Compiled using GCC 5.4.X Hyper Toolchains 
-- Updated CVE Patch From LineageOS Kernel Source 20170826
+- Updated CVE Patch From LineageOS Kernel Source 20171106
 
 #PRIVATE PROJECT
 
@@ -43,7 +43,7 @@ Build status :
 - Third  Build      Done           (20170821) [Uploaded]/[XDA Version]
 - Fourth Build      Done	   (20170913) [Uploaded]
 - Five   Build	    Done	   (20171002) [Uploaded]/[XDA Version]
-- Final  Build      Building       (20180120) [Not Uploaded]
+- Final  Build      Building       (20180121) [Not Uploaded]
 
 Thanks to :
 Ron Gokhale (@PecanCM)    [For Kernel Source]

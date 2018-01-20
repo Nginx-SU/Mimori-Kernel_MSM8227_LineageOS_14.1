@@ -1,12 +1,14 @@
 Changelog :
 
-Six Build (20180120)[FINAL BUILD]:
+Six Build (20180121)[FINAL BUILD]:
+- Updated Kernel Security Patch to 20171106 (Based on MSM8960T Source)
 - Change GCC to GCC 5.4.X Hyper Toolchains
 - Misc fixes with intelli thermal
 - Applied last patch with 3.4.113
 - Applied security patch with "KRACKS attacks"
 - Removed sdcardfs drivers (not used by device)
 - Misc CPU Optimization
+- Set readahed to 512kb
 
 Five Build (20171002):
 - Introduce IMAGINE Codename
