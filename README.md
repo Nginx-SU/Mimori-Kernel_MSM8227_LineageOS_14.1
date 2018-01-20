@@ -13,12 +13,11 @@ This kernel feature is :
 - Added overclock up to 1,4Ghz
 - Added Double Tap 2 Wake Feature (Incl. Vibration)
 - Added custom CPU Governor 
-: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,Hyper & SmartassV2
+: Alucard,Intelliactive,IntelliMM,Lionheart,Adaptive,Hyper,Blu Active & SmartassV2
 - Added custom I/O Sched Governor 
 : zen,sio,sioplus,tripndroid,fifo,fiops and vr
 - Added custom TCP Modules
 : Advanced,Bic,Westwood,Hybla,Vegas,Veno,Yeah and more
-- Added USB Fastcharge v1
 - Added CPU Voltage Table Control
 - Implement Power Efficient Workqueues
 - Dynamic management of dirty page writebacks
@@ -33,20 +32,21 @@ This kernel feature is :
 - Added EXFAT File System Support (Driver Version v1.2.9) (Need Test)
 - Added USB Keyboard Support
 - Optimized I/O Sched
-- Compiled using GCC 4.9.X Hyper Toolchains 
+- Compiled using GCC 5.4.X Hyper Toolchains 
 - Updated CVE Patch From LineageOS Kernel Source 20170826
 
 #PRIVATE PROJECT
 
 Build status :
-- First Build       Done           (20170816) [Not Uploaded]
+- First  Build      Done           (20170816) [Not Uploaded]
 - Second Build      Done           (20170817) [  Uploaded  ]
-- Third Build       Done           (20170821) [Uploaded]/[XDA Version]
+- Third  Build      Done           (20170821) [Uploaded]/[XDA Version]
 - Fourth Build      Done	   (20170913) [Uploaded]
-- Five Build	    Done	   (20171002) [Uploaded]/[XDA Version]
+- Five   Build	    Done	   (20171002) [Uploaded]/[XDA Version]
+- Final  Build      Building       (20180120) [Not Uploaded]
 
 Thanks to :
 Ron Gokhale (@PecanCM)    [For Kernel Source]
-Ngxson (@thichthat)       [For DT2W Source  ]
+Ngxson      (@thichthat)  [For DT2W Source]
 
 # プロジェクト　ラブライブ | Project Mimori (2018)

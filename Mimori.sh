@@ -15,7 +15,7 @@
 #
 
 #Logic Memory
-# CROSS_COMPILE_4="/home/Matsuura/GCC/Hyper-Toolchains.4.9/bin"
+CROSS_COMPILE_4="/home/Matsuura/arm-linux-androideabi-4.9/bin"
 CROSS_COMPILE_5="/home/Matsuura/arm-linux-androideabi-5.x/bin"
 kernel_zImage="arch/arm/boot/zImage"
 kernel_source="/home/Matsuura/Mimori-Kernel"
@@ -80,16 +80,16 @@ fi
 }
 
 #Kernel Modules GCC4
-# modules_gcc_4(){
-# echo "##Creating Temporary Modules kernel"
-# mkdir modules
-# cp $kernel_zImage modules
-# find . -name "*.ko" -exec cp {} modules \;
-# cd modules
-# $CROSS_COMPILE_4/arm-linux-androideabi-strip --strip-unneeded *.ko
-# cd $kernel_source
-# mv modules TEMP
-# }
+modules_gcc_4(){
+echo "##Creating Temporary Modules kernel"
+mkdir modules
+cp $kernel_zImage modules
+find . -name "*.ko" -exec cp {} modules \;
+cd modules
+$CROSS_COMPILE_4/arm-linux-androideabi-strip --strip-unneeded *.ko
+cd $kernel_source
+mv modules TEMP
+}
 
 #Kernel Modules GCC5
 modules_gcc_5(){
@@ -132,12 +132,12 @@ echo "
 #                                                    #
 #                Nicklas Van Dam @XDA                #
 #                                                    #
-#	   PRIVATE DEVELOPMENT OF mimori Kernel	     #
+#	   PRIVATE DEVELOPMENT OF Mimori Kernel	     #
 #						     #
 ######################################################"
 echo "Welcome To Mimori Kernel Builder"
 echo "Select Which GCC To Use ?"
-echo "1. GCC 4.9.X (Temporary Disable)"
+echo "1. GCC 4.9.X (Only for old build)"
 echo "2. GCC 5.4.X"
 echo "( 1 / 2)"
 read choice
@@ -145,13 +145,13 @@ answer
 if [ "$choice" == "$A" ];
 	then
 		echo "##Running GCC Toolchains 4.9 (Hyper Toolchains)"
-		# export ARCH=arm
-		# export CROSS_COMPILE=$CROSS_COMPILE_4/arm-linux-androideabi-
-		# echo "##Building Mimori Kernel"
-		# make ARCH=arm mimori_nicki_defconfig
-		# make ARCH=arm CROSS_COMPILE=$CROSS_COMPILE_4/arm-linux-androideabi- -j4 -> mimori.log
-		# modules_gcc_4
-		# checking
+		export ARCH=arm
+		export CROSS_COMPILE=$CROSS_COMPILE_4/arm-linux-androideabi-
+		echo "##Building Mimori Kernel"
+		make ARCH=arm mimori_nicki_defconfig
+		make ARCH=arm CROSS_COMPILE=$CROSS_COMPILE_4/arm-linux-androideabi- -j4 -> mimori.log
+		modules_gcc_4
+		checking
 		echo "Sorry this menu is temporary disable"
 		menu_compile
 fi
