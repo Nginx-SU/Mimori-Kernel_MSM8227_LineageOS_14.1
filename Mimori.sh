@@ -126,7 +126,7 @@ fi
 
 #Kernel Done
 finish(){
-cp Build/mimori_nicki-signed.zip /mnt/c/User/Nickl/Downloads
+cp Build/Mimori_Kernel-nicki-signed.zip /mnt/c/Users/Nickl/Downloads
 echo "Kernel already copied to outside from linux :)"
 }
 
