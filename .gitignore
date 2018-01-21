@@ -44,7 +44,7 @@ modules.builtin
 /System.map
 /Module.markers
 /Module.symvers
-/TEMP
+/TEMP/Pre-built_ZIP
 
 #
 # Debian directory (make deb-pkg)
