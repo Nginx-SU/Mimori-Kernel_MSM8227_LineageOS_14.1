@@ -66,6 +66,7 @@ then
 	echo "Cleaning up"
 	cd $kernel_source
 	make clean && make mrproper
+	finish
 	exit
 else
 	echo "Kernel not found"
@@ -121,6 +122,12 @@ if [ "$option" == "$D" ];
 		echo "See You Later"
 		exit
 fi
+}
+
+#Kernel Done
+finish(){
+cp Build/mimori_nicki-signed.zip /mnt/c/User/Nickl/Downloads
+echo "Kernel already copied to outside from linux :)"
 }
 
 #Main Program
