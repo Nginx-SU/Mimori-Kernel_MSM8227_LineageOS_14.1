@@ -15,10 +15,10 @@
 #
 
 #Logic Memory
-CROSS_COMPILE_4="/home/Matsuura/arm-linux-androideabi-4.9/bin"
-CROSS_COMPILE_5="/home/Matsuura/arm-linux-androideabi-5.x/bin"
+CROSS_COMPILE_4="$HOME/arm-linux-androideabi-4.9/bin"
+CROSS_COMPILE_5="$HOME/arm-linux-androideabi-5.x/bin"
 kernel_zImage="arch/arm/boot/zImage"
-kernel_source="/home/Matsuura/Mimori-Kernel"
+kernel_source="$HOME/Mimori-Kernel"
 kernel_zip="TEMP/Pre-built_ZIP/ZIP"
 zImage="TEMP/modules/zImage"
 
@@ -45,7 +45,7 @@ rm -rfv META-INF
 rm -rfv system
 rm -rfv tmp
 mv Mimori_Kernel.zip /home/Matsuura/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign/Mimori_Kernel.zip
-cd /home/Matsuura/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign
+cd $HOME/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign
 java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Mimori_Kernel.zip Mimori_Kernel-nicki-signed.zip
 mv  Mimori_Kernel-nicki-signed.zip /home/Matsuura/Mimori-Kernel/Build/Mimori_Kernel-nicki-signed.zip
 rm Mimori_Kernel.zip
@@ -63,6 +63,9 @@ then
 	echo "Kernel found"
 	echo "Continue to build kernel"
 	build
+	message=${1:-"国木田花丸 (CV.高槻かなこ)"}
+	notify-send -t 10000 -i TEMP/Additional/1.jpg "おやすみなさん！" "$message"
+	ffplay TEMP/Additional/1.flac
 	echo "Cleaning up"
 	cd $kernel_source
 	make clean && make mrproper
@@ -71,7 +74,11 @@ then
 else
 	echo "Kernel not found"
 	echo "Cancel kernel to build"
-	echo "Please Check Log"
+	gedit mimori.log
+	cd $kernel_source
+	message=${1:-"AZALEA"}
+	notify-send -t 10000 -i TEMP/Additional/2.jpg "Tokimeki Bunruigaku" "$message"
+	ffplay TEMP/Additional/2.flac
 	echo "Cleaning up"
 	cd $kernel_source
 	make clean && make mrproper
@@ -124,11 +131,11 @@ if [ "$option" == "$D" ];
 fi
 }
 
-#Kernel Done
-finish(){
-cp Build/Mimori_Kernel-nicki-signed.zip /mnt/c/Users/Nickl/Downloads
-echo "Kernel already copied to outside from linux :)"
-}
+# Kernel Done (Only on Ubuntu WSL)
+# finish(){
+# cp Build/Mimori_Kernel-nicki-signed.zip /mnt/c/Users/Nickl/Downloads
+# echo "Kernel already copied to outside from linux :)"
+# }
 
 #Main Program
 menu_compile(){
@@ -159,7 +166,6 @@ if [ "$choice" == "$A" ];
 		make ARCH=arm CROSS_COMPILE=$CROSS_COMPILE_4/arm-linux-androideabi- -j4 -> mimori.log
 		modules_gcc_4
 		checking
-		echo "Sorry this menu is temporary disable"
 		menu_compile
 fi
 if [ "$choice" == "$B" ];
