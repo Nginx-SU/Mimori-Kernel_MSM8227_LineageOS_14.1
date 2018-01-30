@@ -44,10 +44,11 @@ zip -r Mimori_Kernel *
 rm -rfv META-INF
 rm -rfv system
 rm -rfv tmp
-mv Mimori_Kernel.zip /home/Matsuura/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign/Mimori_Kernel.zip
+cd $HOME/Mimori-Kernel/TEMP/Pre-built_ZIP/ZIP
+mv Mimori_Kernel.zip $HOME/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign/Mimori_Kernel.zip
 cd $HOME/Mimori-Kernel/TEMP/Pre-built_ZIP/Sign
 java -jar signapk.jar signature-key.Nicklas@XDA.x509.pem signature-key.Nicklas@XDA.pk8 Mimori_Kernel.zip Mimori_Kernel-nicki-signed.zip
-mv  Mimori_Kernel-nicki-signed.zip /home/Matsuura/Mimori-Kernel/Build/Mimori_Kernel-nicki-signed.zip
+mv  Mimori_Kernel-nicki-signed.zip $HOME/Mimori-Kernel/Build/Mimori_Kernel-nicki-signed.zip
 rm Mimori_Kernel.zip
 echo "Mimori Kernel Completed to build"
 echo "Thanks to XDA - Developers"
@@ -65,11 +66,10 @@ then
 	build
 	message=${1:-"国木田花丸 (CV.高槻かなこ)"}
 	notify-send -t 10000 -i TEMP/Additional/1.jpg "おやすみなさん！" "$message"
-	ffplay TEMP/Additional/1.flac
+	ffplay $HOME/Mimori-Kernel/TEMP/Additional/1.flac
 	echo "Cleaning up"
 	cd $kernel_source
 	make clean && make mrproper
-	finish
 	exit
 else
 	echo "Kernel not found"
@@ -78,7 +78,7 @@ else
 	cd $kernel_source
 	message=${1:-"AZALEA"}
 	notify-send -t 10000 -i TEMP/Additional/2.jpg "Tokimeki Bunruigaku" "$message"
-	ffplay TEMP/Additional/2.flac
+	ffplay $HOME/Mimori-Kernel/TEMP/Additional/2.flac
 	echo "Cleaning up"
 	cd $kernel_source
 	make clean && make mrproper
