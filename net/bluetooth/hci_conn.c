@@ -45,7 +45,6 @@
 
 #include <net/bluetooth/bluetooth.h>
 #include <net/bluetooth/hci_core.h>
-#include <net/bluetooth/smp.h>
 #include <net/bluetooth/l2cap.h>
 
 struct hci_conn *hci_le_connect(struct hci_dev *hdev, __u16 pkt_type,
@@ -994,7 +993,6 @@ int hci_conn_security(struct hci_conn *conn, __u8 sec_level, __u8 auth_type)
 	if (conn->type == LE_LINK) {
 		if (conn->pending_sec_level > sec_level)
 			sec_level = conn->pending_sec_level;
-			return smp_conn_security(conn, sec_level);
 
 		if (sec_level > conn->sec_level)
 			conn->pending_sec_level = sec_level;
