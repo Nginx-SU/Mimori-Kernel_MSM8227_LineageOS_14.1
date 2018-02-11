@@ -6956,7 +6956,7 @@ void perf_pmu_migrate_context(struct pmu *pmu, int src_cpu, int dst_cpu)
 	mutex_lock_double(&src_ctx->mutex, &dst_ctx->mutex);
 	list_for_each_entry_safe(event, tmp, &src_ctx->event_list,
 				 event_entry) {
-		perf_remove_from_context(event);
+		perf_remove_from_context(event, true);
 		put_ctx(src_ctx);
 		list_add(&event->event_entry, &events);
 	}
@@ -7529,7 +7529,6 @@ static void perf_event_exit_cpu_context(int cpu)
 			ctx = &per_cpu_ptr(pmu->pmu_cpu_context, cpu)->ctx;
 
 			mutex_lock(&ctx->mutex);
-			swhash->online = false;
 			smp_call_function_single(cpu, __perf_event_exit_context,
 						 ctx, 1);
 			mutex_unlock(&ctx->mutex);
