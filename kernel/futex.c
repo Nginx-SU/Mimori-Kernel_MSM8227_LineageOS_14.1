@@ -742,7 +742,7 @@ lookup_pi_state(u32 uval, struct futex_hash_bucket *hb,
 
 	/*
 	 * We are the first waiter - try to look up the real owner and attach
-	 * the new pi_state to it, but bail out when TID = 0
+	 * the new pi_state to it, but bail out when TID = 0 [1]
 	 */
 	if (!pid)
 		return -ESRCH;
