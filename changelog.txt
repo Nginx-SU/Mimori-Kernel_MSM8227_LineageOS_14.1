@@ -1,6 +1,12 @@
 Changelog :
 
-Six Build (20180121)[FINAL BUILD]:
+Seventh Build (20180211):
+- Fixed some upstream issue
+- Upstream to 3.4.113 (REBASE change)
+- Fix issue with OTG problem (Recovery or System)
+- Updated F2FS to latest 3.4.y and misc fixes
+
+Sixth Build (20180122):
 - Updated Kernel Security Patch to 20171106 (Based on MSM8960T Source)
 - Change GCC to GCC 5.4.X Hyper Toolchains
 - Misc fixes with intelli thermal
@@ -9,15 +15,23 @@ Six Build (20180121)[FINAL BUILD]:
 - Removed sdcardfs drivers (not used by device)
 - Misc CPU Optimization
 - Set readahed to 512kb
+- Added GPU optimizations flags
+- Improve Hard Floating Point for neon-vfpv4
 
-Five Build (20171002):
+Fifth Build (20171002):
 - Introduce IMAGINE Codename
 - Upstream Linux Kernel to 3.4.113 based on git.kernel.org
 - Revert  change of F2FS (back to old source)
 - Revert some optimization change
+- Added Maple I/O Sched
 - I/O Sched Optimization for SIO and ZEN
+- Enable Interface Of Software CRC
 - Misc CPU Optimization
 - Added some sched optimization
+- Disabled USB Fastcharge v1
+- Reverting Permissive, Back to Enforcing
+- Added Blu Active CPU Governor
+- Added Support for Neon VFPv4 With Hard Floating
 
 Fourth Build (20170913):
 - Added Optimization on I/O Sched (Improves SSD Speed)
@@ -31,9 +45,14 @@ Fourth Build (20170913):
 - Added CCACHE for faster kernel building
 - Updated CVE Patch (Kernel Security Patch) to 20170826 Based On MSM8960T
 - Misc Optimization
-- Added Quick Wakeup driver 
+- Added Quick Wakeup driver
+- BACKPORT F2FS from branch Linux 3.4.y (git.kernel.org)
+- Reverting Quick Wakeup Driver
+- Added USB Keyboard features
+- Updated SDCARDFS Driver
+- Misc fixes
 
-Third Build (20170818):
+Third Build (20170821):
 - Little Improvement on CPU Bus Speed
 - Added Dynamic Fsync 2.0
 - Added Frandom Support
@@ -43,6 +62,15 @@ Third Build (20170818):
 - Removed "+" Symbol From Kernel Version String
 - Implement Power Efficient Workqueues Feature (Enable by Default)
 - Revert Alucard CPU Governor to v1.0
+- Added Interface of Arch Power Features (Disable by Default)
+- Entropy Tweaks
+- Build vfp with softfp
+- Misc change with cpufreq
+- Added Intelli Plug and Intelli Thermal
+- Fix Neon VFP
+- Upgraded Kernel to 3.4.4
+- Change toolchains to Hyper Toolchains GCC 4.9
+- Decrease thermal limits to 70c
  
 Second Build (20170817):
 - Set kernel as permissive
@@ -61,4 +89,3 @@ First Build (20170816):
   - DT2W Feature
   - CPU Optimization Algorithm
   - Custom I/O Sched
- 

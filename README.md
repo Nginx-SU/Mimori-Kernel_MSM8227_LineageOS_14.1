@@ -9,6 +9,7 @@ Recommended Kernel Configuration App:
 - Device Control
 
 This kernel feature is :
+- Linux Kernel v3.4.113
 - Compatibility with AOSP,CM And LineageOS based ROM [Android 7.0+]
 - Added overclock up to 1,4Ghz
 - Added Double Tap 2 Wake Feature (Incl. Vibration)
@@ -43,7 +44,8 @@ Build status :
 - Third  Build      Done           (20170821) [Uploaded]/[XDA Version]
 - Fourth Build      Done	   (20170913) [Uploaded]
 - Five   Build	    Done	   (20171002) [Uploaded]/[XDA Version]
-- Final  Build      Building       (20180121) [Not Uploaded]
+- Sixth  Build 	    Done 	   (20180122) [Uploaded]/[XDA Version]
+- Seventh Build     Building	   (20180212) [Not Uploaded]
 
 Thanks to :
 Ron Gokhale (@PecanCM)    [For Kernel Source]
