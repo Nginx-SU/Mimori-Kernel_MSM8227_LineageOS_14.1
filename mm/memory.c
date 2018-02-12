@@ -1448,16 +1448,6 @@ int zap_vma_ptes(struct vm_area_struct *vma, unsigned long address,
 }
 EXPORT_SYMBOL_GPL(zap_vma_ptes);
 
-/*
- * FOLL_FORCE can write to even unwritable pte's, but only
- * after we've gone through a COW cycle and they are dirty.
- */
-static inline bool can_follow_write_pte(pte_t pte, unsigned int flags)
-{
-	return pte_write(pte) ||
-		((flags & FOLL_FORCE) && (flags & FOLL_COW) && pte_dirty(pte));
-}
-
 static inline bool can_follow_write_pte(pte_t pte, struct page *page,
 					unsigned int flags)
 {
@@ -1560,7 +1550,7 @@ split_fallthrough:
 		goto no_page;
 
 	page = vm_normal_page(vma, address, pte);
-	if ((flags & FOLL_WRITE) && !can_follow_write_pte(pte, page, flags)) {
+	if ((flags & FOLL_WRITE) && !pte_write(pte)) {
 		pte_unmap_unlock(ptep, ptl);
 		return NULL;
 	}
@@ -1607,7 +1597,7 @@ split_fallthrough:
 			unlock_page(page);
 		}
 	}
-unlock:
+
 	pte_unmap_unlock(ptep, ptl);
 out:
 	return page;
@@ -1860,7 +1850,7 @@ int __get_user_pages(struct task_struct *tsk, struct mm_struct *mm,
 				 */
 				if ((ret & VM_FAULT_WRITE) &&
 				    !(vma->vm_flags & VM_WRITE))
-					foll_flags |= FOLL_COW;
+					foll_flags &= ~FOLL_WRITE;
 
 				cond_resched();
 			}
