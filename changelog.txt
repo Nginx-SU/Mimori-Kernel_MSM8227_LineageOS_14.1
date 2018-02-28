@@ -1,5 +1,9 @@
 Changelog :
 
+Seventh_RC_1  (20180228):
+- Rebase F2FS and EXFAT to latest source from msm8960
+- Re-configure some cpu governor
+
 Seventh Build (20180211):
 - Fix some upstream issue
 - Upstream to 3.4.113 (REBASE change)

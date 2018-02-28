@@ -29,8 +29,8 @@ This kernel feature is :
 - NEON VFP Optimized (softfp)
 - Added Intelli Plug v4.0
 - Added Intelli Thermal
-- Added F2FS File System Support (Based on Linux 3.4.y Branch) (Working)
-- Added EXFAT File System Support (Driver Version v1.2.9) (Need Test)
+- Added F2FS File System Support 
+- Added EXFAT File System Support
 - Added USB Keyboard Support
 - Optimized I/O Sched
 - Compiled using GCC 5.4.X Hyper Toolchains 
@@ -39,13 +39,14 @@ This kernel feature is :
 #PRIVATE PROJECT
 
 Build status :
-- First  Build      Done           (20170816) [Not Uploaded]
-- Second Build      Done           (20170817) [  Uploaded  ]
-- Third  Build      Done           (20170821) [Uploaded]/[XDA Version]
-- Fourth Build      Done	   (20170913) [Uploaded]
-- Five   Build	    Done	   (20171002) [Uploaded]/[XDA Version]
-- Sixth  Build 	    Done 	   (20180122) [Uploaded]/[XDA Version]
-- Seventh Build     Building	   (20180212) [Not Uploaded]
+- First    	Build    Done      (20170816) [Not Uploaded]
+- Second   	Build    Done      (20170817) [  Uploaded  ]
+- Third    	Build    Done      (20170821) [Uploaded]/[XDA Version]
+- Fourth   	Build    Done	   (20170913) [Uploaded]
+- Five     	Build    Done	   (20171002) [Uploaded]/[XDA Version]
+- Sixth    	Build    Done 	   (20180122) [Uploaded]/[XDA Version]
+- Seventh  	Build    Done	   (20180212) [XDA Only]
+- Seventh_RC_1  Build    Building  (20180228) [Not Uploaded]
 
 Thanks to :
 Ron Gokhale (@PecanCM)    [For Kernel Source]
